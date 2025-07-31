@@ -1,0 +1,28 @@
+struct{
+  int value;
+  PCB*L;
+}semaphore;
+
+int main(){
+  semaphore gmutex->value=1,jmutex->value=k,qmutex->value=k;
+  int WaitLine1=0,WaitLine2=0;
+  P_patient{
+    wait(gmutex);
+    //挂号
+    signal(gmutex);
+    wait(jmutex);
+    //看病
+    wait(qmutex);
+    //取药
+  }
+  P_doctor{
+    if(jmutex->value!=k){
+      signal(jmutex);
+    }
+  }
+  P_medic{
+    if(qmutex->value!=k){
+      signal(qmutex);
+    }
+  }
+}
