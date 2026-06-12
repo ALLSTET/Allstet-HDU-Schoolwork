@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Win32-SFML",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/SFML3/include",
+                "${workspaceFolder}/core"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\mingw64\\bin\\g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerArgs": [
+                "-I${workspaceFolder}/SFML3/include",
+                "-L${workspaceFolder}/SFML3/lib"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/SFML3/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

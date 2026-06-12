@@ -1,0 +1,124 @@
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=HeartA tex=750x1044 @430,650
+drawCard #2 HIT: key=SpadeA tex=750x1044 @500,650
+drawCard #3 HIT: key=Spade3 tex=749x1044 @570,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Spade6 tex=749x1044 @430,650
+drawCard #2 HIT: key=Club8 tex=749x1044 @500,650
+drawCard #3 HIT: key=HeartK tex=749x1044 @570,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Club9 tex=750x1044 @430,650
+drawCard #2 HIT: key=Diamond6 tex=749x1045 @500,650
+drawCard #3 HIT: key=DiamondA tex=750x1045 @570,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Diamond10 tex=749x1045 @465,650
+drawCard #2 HIT: key=Diamond3 tex=749x1045 @535,650
+drawCard #3 HIT: key=Club6 tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=HeartK tex=749x1044 @465,650
+drawCard #2 HIT: key=Heart6 tex=749x1044 @535,650
+drawCard #3 HIT: key=DiamondA tex=750x1045 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=ClubJ tex=749x1044 @465,650
+drawCard #2 HIT: key=Diamond8 tex=749x1045 @535,650
+drawCard #3 HIT: key=Spade7 tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Club4 tex=749x1044 @465,650
+drawCard #2 HIT: key=ClubJ tex=749x1044 @535,650
+drawCard #3 HIT: key=DiamondJ tex=749x1045 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Heart2 tex=749x1044 @465,650
+drawCard #2 HIT: key=ClubQ tex=749x1044 @535,650
+drawCard #3 HIT: key=Spade10 tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Spade4 tex=749x1044 @465,650
+drawCard #2 HIT: key=ClubJ tex=749x1044 @535,650
+drawCard #3 HIT: key=Club5 tex=750x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=HeartJ tex=749x1044 @465,650
+drawCard #2 HIT: key=Diamond3 tex=749x1045 @535,650
+drawCard #3 HIT: key=Spade7 tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Heart2 tex=749x1044 @465,650
+drawCard #2 HIT: key=SpadeK tex=749x1044 @535,650
+drawCard #3 HIT: key=Spade6 tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Spade6 tex=749x1044 @465,650
+drawCard #2 HIT: key=Club5 tex=750x1044 @535,650
+drawCard #3 HIT: key=ClubQ tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=SpadeK tex=749x1044 @465,650
+drawCard #2 HIT: key=Club3 tex=749x1044 @535,650
+drawCard #3 HIT: key=Heart3 tex=749x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Diamond3 tex=749x1045 @465,650
+drawCard #2 HIT: key=Heart6 tex=749x1044 @535,650
+drawCard #3 HIT: key=Club5 tex=750x1044 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Club5 tex=750x1044 @465,650
+drawCard #2 HIT: key=Heart9 tex=750x1044 @535,650
+drawCard #3 HIT: key=Diamond2 tex=749x1045 @605,650
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+drawCard #1 HIT: key=Spade5 tex=750x1044 @465,560
+drawCard #2 HIT: key=Spade8 tex=749x1044 @535,560
+drawCard #3 HIT: key=Spade10 tex=749x1044 @605,560

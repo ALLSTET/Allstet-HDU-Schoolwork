@@ -1,24 +1,15 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "shell",
             "label": "C/C++: g++.exe 生成活动文件",
-            "command": "C:/mingw64/bin/g++.exe",
+            "command": "cmd",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-leasyX",
-                "-lwinmm",
-                "-lfreeglut",
-                "-mwindows",
-                "-lopengl32",
-                "-lglu32"
+                "/c",
+                "chcp 936>nul && C:/mingw64/bin/g++.exe -fdiagnostics-color=always -g \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" -IC:/mingw64/include/SDL2 -LC:/mingw64/lib -lSDL2main -lSDL2 -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system -L C:/SFML/lib"
             ],
             "options": {
-                "cwd": "C:/mingw64/bin"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -27,7 +18,27 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "调试器生成的任务。"
+            "detail": "编译当前活动文件"
+        },
+        {
+            "type": "shell",
+            "label": "Snake: 编译完整项目 (GB2312)",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "[Console]::OutputEncoding = [Text.Encoding]::GetEncoding('GB2312'); chcp 936 | Out-Null; Set-Location '${workspaceFolder}\\codes\\Snakes'; C:/mingw64/bin/g++.exe -fdiagnostics-color=always -g -std=c++17 GreedySnake.cpp Game.cpp Snake.cpp Food.cpp Renderer.cpp Input.cpp SaveSystem.cpp -o snake.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\codes\\Snakes"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "detail": "编译Snake贪吃蛇完整项目（控制台双缓冲，GB2312编码）"
         }
     ],
     "version": "2.0.0"

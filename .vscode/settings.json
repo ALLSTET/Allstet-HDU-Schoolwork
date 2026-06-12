@@ -14,7 +14,7 @@
   "files.autoSave": "afterDelay",
   "editor.quickSuggestionsDelay": 1000000000,
   "editor.suggest.snippetsPreventQuickSuggestions": true,
-  "Lingma.cloudModelLanguagesOrFileExtensions": "c；cpp",
+  "Lingma.cloudModelLanguagesOrFileExtensions": "c;cpp",
   "files.associations": {
     "*.dbclient-js": "javascript",
     ".fantomasignore": "ignore",
@@ -71,6 +71,22 @@
     "streambuf": "cpp",
     "text_encoding": "cpp",
     "typeinfo": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "ios": "cpp",
+    "fstream": "cpp",
+    "cerrno": "cpp",
+    "climits": "cpp",
+    "cfloat": "cpp",
+    "locale": "cpp",
+    "queue": "cpp",
+    "cinttypes": "cpp",
+    "cstdbool": "cpp",
+    "*.rh": "cpp",
+    "set": "cpp",
+    "iomanip": "cpp",
+    "sstream": "cpp",
+    "map": "cpp",
+    "chrono": "cpp",
+    "ratio": "cpp"
   }
 }

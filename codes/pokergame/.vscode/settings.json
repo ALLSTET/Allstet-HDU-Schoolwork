@@ -1,0 +1,36 @@
+{
+    "files.exclude": {
+        "**/*.o": true,
+        "**/*.exe": false
+    },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}",
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/SFML3/include",
+        "${workspaceFolder}/core",
+        "${workspaceFolder}/systems",
+        "${workspaceFolder}/gameplay",
+        "${workspaceFolder}/persistence",
+        "${workspaceFolder}/common"
+    ],
+    "C_Cpp.default.compilerPath": "C:\\mingw64\\bin\\g++.exe",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.default.compilerArgs": [
+        "-I${workspaceFolder}/SFML3/include",
+        "-L${workspaceFolder}/SFML3/lib",
+        "-lsfml-graphics",
+        "-lsfml-window",
+        "-lsfml-system"
+    ],
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": false
+    },
+    "editor.formatOnSave": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/SFML3": true
+    }
+}

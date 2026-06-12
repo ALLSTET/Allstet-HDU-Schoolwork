@@ -12,8 +12,7 @@
                 "_UNICODE"
             ],
             "compilerPath": "C:\\mingw64\\bin\\gcc.exe",
-            "intelliSenseMode": "gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4
