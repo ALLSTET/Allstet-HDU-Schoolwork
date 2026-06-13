@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "GreedySnake",
+					"name" : "SnakeGame",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "snake::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-snake-Debug-dec062751bf25572915f.json",
+					"jsonFile" : "target-snake-Debug-32a61482cc0048d1aa75.json",
 					"name" : "snake",
 					"projectIndex" : 0
 				}

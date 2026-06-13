@@ -128,173 +128,221 @@ snake/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/build
 .PHONY : snake/fast
 
-Food.obj: Food.cpp.obj
-.PHONY : Food.obj
+core/GameLoop.obj: core/GameLoop.cpp.obj
+.PHONY : core/GameLoop.obj
 
 # target to build an object file
-Food.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Food.cpp.obj
-.PHONY : Food.cpp.obj
+core/GameLoop.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/core/GameLoop.cpp.obj
+.PHONY : core/GameLoop.cpp.obj
 
-Food.i: Food.cpp.i
-.PHONY : Food.i
+core/GameLoop.i: core/GameLoop.cpp.i
+.PHONY : core/GameLoop.i
 
 # target to preprocess a source file
-Food.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Food.cpp.i
-.PHONY : Food.cpp.i
+core/GameLoop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/core/GameLoop.cpp.i
+.PHONY : core/GameLoop.cpp.i
 
-Food.s: Food.cpp.s
-.PHONY : Food.s
+core/GameLoop.s: core/GameLoop.cpp.s
+.PHONY : core/GameLoop.s
 
 # target to generate assembly for a file
-Food.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Food.cpp.s
-.PHONY : Food.cpp.s
+core/GameLoop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/core/GameLoop.cpp.s
+.PHONY : core/GameLoop.cpp.s
 
-Game.obj: Game.cpp.obj
-.PHONY : Game.obj
+core/StateMachine.obj: core/StateMachine.cpp.obj
+.PHONY : core/StateMachine.obj
 
 # target to build an object file
-Game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Game.cpp.obj
-.PHONY : Game.cpp.obj
+core/StateMachine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/core/StateMachine.cpp.obj
+.PHONY : core/StateMachine.cpp.obj
 
-Game.i: Game.cpp.i
-.PHONY : Game.i
+core/StateMachine.i: core/StateMachine.cpp.i
+.PHONY : core/StateMachine.i
 
 # target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Game.cpp.i
-.PHONY : Game.cpp.i
+core/StateMachine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/core/StateMachine.cpp.i
+.PHONY : core/StateMachine.cpp.i
 
-Game.s: Game.cpp.s
-.PHONY : Game.s
+core/StateMachine.s: core/StateMachine.cpp.s
+.PHONY : core/StateMachine.s
 
 # target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Game.cpp.s
-.PHONY : Game.cpp.s
+core/StateMachine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/core/StateMachine.cpp.s
+.PHONY : core/StateMachine.cpp.s
 
-GreedySnake.obj: GreedySnake.cpp.obj
-.PHONY : GreedySnake.obj
+gameplay/Food.obj: gameplay/Food.cpp.obj
+.PHONY : gameplay/Food.obj
 
 # target to build an object file
-GreedySnake.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/GreedySnake.cpp.obj
-.PHONY : GreedySnake.cpp.obj
+gameplay/Food.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/gameplay/Food.cpp.obj
+.PHONY : gameplay/Food.cpp.obj
 
-GreedySnake.i: GreedySnake.cpp.i
-.PHONY : GreedySnake.i
+gameplay/Food.i: gameplay/Food.cpp.i
+.PHONY : gameplay/Food.i
 
 # target to preprocess a source file
-GreedySnake.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/GreedySnake.cpp.i
-.PHONY : GreedySnake.cpp.i
+gameplay/Food.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/gameplay/Food.cpp.i
+.PHONY : gameplay/Food.cpp.i
 
-GreedySnake.s: GreedySnake.cpp.s
-.PHONY : GreedySnake.s
+gameplay/Food.s: gameplay/Food.cpp.s
+.PHONY : gameplay/Food.s
 
 # target to generate assembly for a file
-GreedySnake.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/GreedySnake.cpp.s
-.PHONY : GreedySnake.cpp.s
+gameplay/Food.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/gameplay/Food.cpp.s
+.PHONY : gameplay/Food.cpp.s
 
-Input.obj: Input.cpp.obj
-.PHONY : Input.obj
+gameplay/Snake.obj: gameplay/Snake.cpp.obj
+.PHONY : gameplay/Snake.obj
 
 # target to build an object file
-Input.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Input.cpp.obj
-.PHONY : Input.cpp.obj
+gameplay/Snake.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/gameplay/Snake.cpp.obj
+.PHONY : gameplay/Snake.cpp.obj
 
-Input.i: Input.cpp.i
-.PHONY : Input.i
+gameplay/Snake.i: gameplay/Snake.cpp.i
+.PHONY : gameplay/Snake.i
 
 # target to preprocess a source file
-Input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Input.cpp.i
-.PHONY : Input.cpp.i
+gameplay/Snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/gameplay/Snake.cpp.i
+.PHONY : gameplay/Snake.cpp.i
 
-Input.s: Input.cpp.s
-.PHONY : Input.s
+gameplay/Snake.s: gameplay/Snake.cpp.s
+.PHONY : gameplay/Snake.s
 
 # target to generate assembly for a file
-Input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Input.cpp.s
-.PHONY : Input.cpp.s
+gameplay/Snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/gameplay/Snake.cpp.s
+.PHONY : gameplay/Snake.cpp.s
 
-Renderer.obj: Renderer.cpp.obj
-.PHONY : Renderer.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-Renderer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Renderer.cpp.obj
-.PHONY : Renderer.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-Renderer.i: Renderer.cpp.i
-.PHONY : Renderer.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Renderer.cpp.i
-.PHONY : Renderer.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-Renderer.s: Renderer.cpp.s
-.PHONY : Renderer.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Renderer.cpp.s
-.PHONY : Renderer.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/main.cpp.s
+.PHONY : main.cpp.s
 
-SaveSystem.obj: SaveSystem.cpp.obj
-.PHONY : SaveSystem.obj
+persistence/SaveSystem.obj: persistence/SaveSystem.cpp.obj
+.PHONY : persistence/SaveSystem.obj
 
 # target to build an object file
-SaveSystem.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/SaveSystem.cpp.obj
-.PHONY : SaveSystem.cpp.obj
+persistence/SaveSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj
+.PHONY : persistence/SaveSystem.cpp.obj
 
-SaveSystem.i: SaveSystem.cpp.i
-.PHONY : SaveSystem.i
+persistence/SaveSystem.i: persistence/SaveSystem.cpp.i
+.PHONY : persistence/SaveSystem.i
 
 # target to preprocess a source file
-SaveSystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/SaveSystem.cpp.i
-.PHONY : SaveSystem.cpp.i
+persistence/SaveSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/persistence/SaveSystem.cpp.i
+.PHONY : persistence/SaveSystem.cpp.i
 
-SaveSystem.s: SaveSystem.cpp.s
-.PHONY : SaveSystem.s
+persistence/SaveSystem.s: persistence/SaveSystem.cpp.s
+.PHONY : persistence/SaveSystem.s
 
 # target to generate assembly for a file
-SaveSystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/SaveSystem.cpp.s
-.PHONY : SaveSystem.cpp.s
+persistence/SaveSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/persistence/SaveSystem.cpp.s
+.PHONY : persistence/SaveSystem.cpp.s
 
-Snake.obj: Snake.cpp.obj
-.PHONY : Snake.obj
+systems/InputSystem.obj: systems/InputSystem.cpp.obj
+.PHONY : systems/InputSystem.obj
 
 # target to build an object file
-Snake.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Snake.cpp.obj
-.PHONY : Snake.cpp.obj
+systems/InputSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/InputSystem.cpp.obj
+.PHONY : systems/InputSystem.cpp.obj
 
-Snake.i: Snake.cpp.i
-.PHONY : Snake.i
+systems/InputSystem.i: systems/InputSystem.cpp.i
+.PHONY : systems/InputSystem.i
 
 # target to preprocess a source file
-Snake.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Snake.cpp.i
-.PHONY : Snake.cpp.i
+systems/InputSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/InputSystem.cpp.i
+.PHONY : systems/InputSystem.cpp.i
 
-Snake.s: Snake.cpp.s
-.PHONY : Snake.s
+systems/InputSystem.s: systems/InputSystem.cpp.s
+.PHONY : systems/InputSystem.s
 
 # target to generate assembly for a file
-Snake.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/Snake.cpp.s
-.PHONY : Snake.cpp.s
+systems/InputSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/InputSystem.cpp.s
+.PHONY : systems/InputSystem.cpp.s
+
+systems/RenderSystem.obj: systems/RenderSystem.cpp.obj
+.PHONY : systems/RenderSystem.obj
+
+# target to build an object file
+systems/RenderSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj
+.PHONY : systems/RenderSystem.cpp.obj
+
+systems/RenderSystem.i: systems/RenderSystem.cpp.i
+.PHONY : systems/RenderSystem.i
+
+# target to preprocess a source file
+systems/RenderSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/RenderSystem.cpp.i
+.PHONY : systems/RenderSystem.cpp.i
+
+systems/RenderSystem.s: systems/RenderSystem.cpp.s
+.PHONY : systems/RenderSystem.s
+
+# target to generate assembly for a file
+systems/RenderSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/RenderSystem.cpp.s
+.PHONY : systems/RenderSystem.cpp.s
+
+systems/TimeSystem.obj: systems/TimeSystem.cpp.obj
+.PHONY : systems/TimeSystem.obj
+
+# target to build an object file
+systems/TimeSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj
+.PHONY : systems/TimeSystem.cpp.obj
+
+systems/TimeSystem.i: systems/TimeSystem.cpp.i
+.PHONY : systems/TimeSystem.i
+
+# target to preprocess a source file
+systems/TimeSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/TimeSystem.cpp.i
+.PHONY : systems/TimeSystem.cpp.i
+
+systems/TimeSystem.s: systems/TimeSystem.cpp.s
+.PHONY : systems/TimeSystem.s
+
+# target to generate assembly for a file
+systems/TimeSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake.dir\build.make CMakeFiles/snake.dir/systems/TimeSystem.cpp.s
+.PHONY : systems/TimeSystem.cpp.s
 
 # Help Target
 help:
@@ -305,27 +353,33 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... snake
-	@echo ... Food.obj
-	@echo ... Food.i
-	@echo ... Food.s
-	@echo ... Game.obj
-	@echo ... Game.i
-	@echo ... Game.s
-	@echo ... GreedySnake.obj
-	@echo ... GreedySnake.i
-	@echo ... GreedySnake.s
-	@echo ... Input.obj
-	@echo ... Input.i
-	@echo ... Input.s
-	@echo ... Renderer.obj
-	@echo ... Renderer.i
-	@echo ... Renderer.s
-	@echo ... SaveSystem.obj
-	@echo ... SaveSystem.i
-	@echo ... SaveSystem.s
-	@echo ... Snake.obj
-	@echo ... Snake.i
-	@echo ... Snake.s
+	@echo ... core/GameLoop.obj
+	@echo ... core/GameLoop.i
+	@echo ... core/GameLoop.s
+	@echo ... core/StateMachine.obj
+	@echo ... core/StateMachine.i
+	@echo ... core/StateMachine.s
+	@echo ... gameplay/Food.obj
+	@echo ... gameplay/Food.i
+	@echo ... gameplay/Food.s
+	@echo ... gameplay/Snake.obj
+	@echo ... gameplay/Snake.i
+	@echo ... gameplay/Snake.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
+	@echo ... persistence/SaveSystem.obj
+	@echo ... persistence/SaveSystem.i
+	@echo ... persistence/SaveSystem.s
+	@echo ... systems/InputSystem.obj
+	@echo ... systems/InputSystem.i
+	@echo ... systems/InputSystem.s
+	@echo ... systems/RenderSystem.obj
+	@echo ... systems/RenderSystem.i
+	@echo ... systems/RenderSystem.s
+	@echo ... systems/TimeSystem.obj
+	@echo ... systems/TimeSystem.i
+	@echo ... systems/TimeSystem.s
 .PHONY : help
 
 

@@ -8,13 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Food.cpp" "CMakeFiles/snake.dir/Food.cpp.obj" "gcc" "CMakeFiles/snake.dir/Food.cpp.obj.d"
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Game.cpp" "CMakeFiles/snake.dir/Game.cpp.obj" "gcc" "CMakeFiles/snake.dir/Game.cpp.obj.d"
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/GreedySnake.cpp" "CMakeFiles/snake.dir/GreedySnake.cpp.obj" "gcc" "CMakeFiles/snake.dir/GreedySnake.cpp.obj.d"
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Input.cpp" "CMakeFiles/snake.dir/Input.cpp.obj" "gcc" "CMakeFiles/snake.dir/Input.cpp.obj.d"
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Renderer.cpp" "CMakeFiles/snake.dir/Renderer.cpp.obj" "gcc" "CMakeFiles/snake.dir/Renderer.cpp.obj.d"
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/SaveSystem.cpp" "CMakeFiles/snake.dir/SaveSystem.cpp.obj" "gcc" "CMakeFiles/snake.dir/SaveSystem.cpp.obj.d"
-  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Snake.cpp" "CMakeFiles/snake.dir/Snake.cpp.obj" "gcc" "CMakeFiles/snake.dir/Snake.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/core/GameLoop.cpp" "CMakeFiles/snake.dir/core/GameLoop.cpp.obj" "gcc" "CMakeFiles/snake.dir/core/GameLoop.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/core/StateMachine.cpp" "CMakeFiles/snake.dir/core/StateMachine.cpp.obj" "gcc" "CMakeFiles/snake.dir/core/StateMachine.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/gameplay/Food.cpp" "CMakeFiles/snake.dir/gameplay/Food.cpp.obj" "gcc" "CMakeFiles/snake.dir/gameplay/Food.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/gameplay/Snake.cpp" "CMakeFiles/snake.dir/gameplay/Snake.cpp.obj" "gcc" "CMakeFiles/snake.dir/gameplay/Snake.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/main.cpp" "CMakeFiles/snake.dir/main.cpp.obj" "gcc" "CMakeFiles/snake.dir/main.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/persistence/SaveSystem.cpp" "CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj" "gcc" "CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/InputSystem.cpp" "CMakeFiles/snake.dir/systems/InputSystem.cpp.obj" "gcc" "CMakeFiles/snake.dir/systems/InputSystem.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/RenderSystem.cpp" "CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj" "gcc" "CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj.d"
+  "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/TimeSystem.cpp" "CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj" "gcc" "CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

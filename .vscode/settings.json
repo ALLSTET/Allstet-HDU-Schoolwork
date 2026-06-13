@@ -1,0 +1,6 @@
+{
+  // 默认文件编码设为 GB2312（与编译时 chcp 936 一致）
+  "files.encoding": "gb2312",
+  // 新建文件使用项目编码
+  "files.autoGuessEncoding": false
+}

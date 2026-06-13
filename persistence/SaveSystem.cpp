@@ -1,10 +1,8 @@
 #include "SaveSystem.h"
 #include <sstream>
-#include <iostream>
 
 SaveSystem::SaveSystem() {}
 
-// ---------- 内部实现 ----------
 std::string SaveSystem::pathForSlot(int slot) const
 {
   if (slot == SLOT_AUTO)
@@ -12,7 +10,7 @@ std::string SaveSystem::pathForSlot(int slot) const
   return "snake_save_" + std::to_string(slot) + ".txt";
 }
 
-bool SaveSystem::saveImpl(const std::string &path, const GameState &state)
+bool SaveSystem::saveImpl(const std::string &path, const SaveData &state)
 {
   std::ofstream file(path);
   if (!file.is_open())
@@ -53,11 +51,13 @@ bool SaveSystem::saveImpl(const std::string &path, const GameState &state)
   return true;
 }
 
-bool SaveSystem::loadImpl(const std::string &path, GameState &state)
+bool SaveSystem::loadImpl(const std::string &path, SaveData &state)
 {
   std::ifstream file(path);
   if (!file.is_open())
     return false;
+
+  bool hasScore = false, hasDir = false, hasSnake = false, hasFood = false;
 
   std::string line;
   while (std::getline(file, line))
@@ -73,26 +73,42 @@ bool SaveSystem::loadImpl(const std::string &path, GameState &state)
 
     if (key == "score")
     {
-      state.score = std::stoi(value);
+      try
+      {
+        state.score = std::stoi(value);
+        hasScore = true;
+      }
+      catch (...)
+      {
+        return false;
+      } // 存档损坏
     }
     else if (key == "dir")
     {
-      int dirInt = std::stoi(value);
-      switch (dirInt)
+      try
       {
-      case 0:
-        state.direction = Direction::UP;
-        break;
-      case 1:
-        state.direction = Direction::DOWN;
-        break;
-      case 2:
-        state.direction = Direction::LEFT;
-        break;
-      case 3:
-        state.direction = Direction::RIGHT;
-        break;
-      default:
+        int dirInt = std::stoi(value);
+        switch (dirInt)
+        {
+        case 0:
+          state.direction = Direction::UP;
+          break;
+        case 1:
+          state.direction = Direction::DOWN;
+          break;
+        case 2:
+          state.direction = Direction::LEFT;
+          break;
+        case 3:
+          state.direction = Direction::RIGHT;
+          break;
+        default:
+          return false; // 存档损坏
+        }
+        hasDir = true;
+      }
+      catch (...)
+      {
         return false;
       }
     }
@@ -106,29 +122,49 @@ bool SaveSystem::loadImpl(const std::string &path, GameState &state)
         size_t commaPos = segment.find(',');
         if (commaPos == std::string::npos)
           return false;
-        int x = std::stoi(segment.substr(0, commaPos));
-        int y = std::stoi(segment.substr(commaPos + 1));
-        state.snake.push_back({x, y});
+        try
+        {
+          int x = std::stoi(segment.substr(0, commaPos));
+          int y = std::stoi(segment.substr(commaPos + 1));
+          state.snake.push_back({x, y});
+        }
+        catch (...)
+        {
+          return false;
+        }
       }
+      if (state.snake.empty())
+        return false;
+      hasSnake = true;
     }
     else if (key == "food")
     {
       size_t commaPos = value.find(',');
       if (commaPos == std::string::npos)
         return false;
-      state.food.x = std::stoi(value.substr(0, commaPos));
-      state.food.y = std::stoi(value.substr(commaPos + 1));
+      try
+      {
+        state.food.x = std::stoi(value.substr(0, commaPos));
+        state.food.y = std::stoi(value.substr(commaPos + 1));
+        hasFood = true;
+      }
+      catch (...)
+      {
+        return false;
+      }
     }
   }
-  return true;
+
+  // 完整性校验：所有字段必须存在
+  return hasScore && hasDir && hasSnake && hasFood;
 }
 
-// ---------- 自动存档 ----------
-bool SaveSystem::autoSave(const GameState &state) { return saveImpl(pathForSlot(SLOT_AUTO), state); }
-bool SaveSystem::autoLoad(GameState &state) { return loadImpl(pathForSlot(SLOT_AUTO), state); }
+// ── 自动存档 ──
+bool SaveSystem::autoSave(const SaveData &state) { return saveImpl(pathForSlot(SLOT_AUTO), state); }
+bool SaveSystem::autoLoad(SaveData &state) { return loadImpl(pathForSlot(SLOT_AUTO), state); }
 bool SaveSystem::autoSaveExists() const { return std::ifstream(pathForSlot(SLOT_AUTO)).good(); }
 
-// ---------- 手动槽位存档 ----------
-bool SaveSystem::saveToSlot(int slot, const GameState &state) { return saveImpl(pathForSlot(slot), state); }
-bool SaveSystem::loadFromSlot(int slot, GameState &state) { return loadImpl(pathForSlot(slot), state); }
+// ── 手动槽位存档 ──
+bool SaveSystem::saveToSlot(int slot, const SaveData &state) { return saveImpl(pathForSlot(slot), state); }
+bool SaveSystem::loadFromSlot(int slot, SaveData &state) { return loadImpl(pathForSlot(slot), state); }
 bool SaveSystem::slotExists(int slot) const { return std::ifstream(pathForSlot(slot)).good(); }

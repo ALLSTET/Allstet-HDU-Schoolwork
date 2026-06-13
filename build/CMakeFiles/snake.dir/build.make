@@ -68,129 +68,161 @@ include CMakeFiles/snake.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/snake.dir/flags.make
 
-CMakeFiles/snake.dir/GreedySnake.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/GreedySnake.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/GreedySnake.cpp
-CMakeFiles/snake.dir/GreedySnake.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/snake.dir/GreedySnake.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/GreedySnake.cpp.obj -MF CMakeFiles\snake.dir\GreedySnake.cpp.obj.d -o CMakeFiles\snake.dir\GreedySnake.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\GreedySnake.cpp
+CMakeFiles/snake.dir/main.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/main.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/main.cpp
+CMakeFiles/snake.dir/main.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/snake.dir/main.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/main.cpp.obj -MF CMakeFiles\snake.dir\main.cpp.obj.d -o CMakeFiles\snake.dir\main.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\main.cpp
 
-CMakeFiles/snake.dir/GreedySnake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/GreedySnake.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\GreedySnake.cpp > CMakeFiles\snake.dir\GreedySnake.cpp.i
+CMakeFiles/snake.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/main.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\main.cpp > CMakeFiles\snake.dir\main.cpp.i
 
-CMakeFiles/snake.dir/GreedySnake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/GreedySnake.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\GreedySnake.cpp -o CMakeFiles\snake.dir\GreedySnake.cpp.s
+CMakeFiles/snake.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/main.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\main.cpp -o CMakeFiles\snake.dir\main.cpp.s
 
-CMakeFiles/snake.dir/Game.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/Game.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Game.cpp
-CMakeFiles/snake.dir/Game.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snake.dir/Game.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/Game.cpp.obj -MF CMakeFiles\snake.dir\Game.cpp.obj.d -o CMakeFiles\snake.dir\Game.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Game.cpp
+CMakeFiles/snake.dir/core/GameLoop.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/core/GameLoop.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/core/GameLoop.cpp
+CMakeFiles/snake.dir/core/GameLoop.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snake.dir/core/GameLoop.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/core/GameLoop.cpp.obj -MF CMakeFiles\snake.dir\core\GameLoop.cpp.obj.d -o CMakeFiles\snake.dir\core\GameLoop.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\core\GameLoop.cpp
 
-CMakeFiles/snake.dir/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/Game.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Game.cpp > CMakeFiles\snake.dir\Game.cpp.i
+CMakeFiles/snake.dir/core/GameLoop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/core/GameLoop.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\core\GameLoop.cpp > CMakeFiles\snake.dir\core\GameLoop.cpp.i
 
-CMakeFiles/snake.dir/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/Game.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Game.cpp -o CMakeFiles\snake.dir\Game.cpp.s
+CMakeFiles/snake.dir/core/GameLoop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/core/GameLoop.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\core\GameLoop.cpp -o CMakeFiles\snake.dir\core\GameLoop.cpp.s
 
-CMakeFiles/snake.dir/Snake.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/Snake.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Snake.cpp
-CMakeFiles/snake.dir/Snake.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake.dir/Snake.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/Snake.cpp.obj -MF CMakeFiles\snake.dir\Snake.cpp.obj.d -o CMakeFiles\snake.dir\Snake.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Snake.cpp
+CMakeFiles/snake.dir/core/StateMachine.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/core/StateMachine.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/core/StateMachine.cpp
+CMakeFiles/snake.dir/core/StateMachine.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake.dir/core/StateMachine.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/core/StateMachine.cpp.obj -MF CMakeFiles\snake.dir\core\StateMachine.cpp.obj.d -o CMakeFiles\snake.dir\core\StateMachine.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\core\StateMachine.cpp
 
-CMakeFiles/snake.dir/Snake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/Snake.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Snake.cpp > CMakeFiles\snake.dir\Snake.cpp.i
+CMakeFiles/snake.dir/core/StateMachine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/core/StateMachine.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\core\StateMachine.cpp > CMakeFiles\snake.dir\core\StateMachine.cpp.i
 
-CMakeFiles/snake.dir/Snake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/Snake.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Snake.cpp -o CMakeFiles\snake.dir\Snake.cpp.s
+CMakeFiles/snake.dir/core/StateMachine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/core/StateMachine.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\core\StateMachine.cpp -o CMakeFiles\snake.dir\core\StateMachine.cpp.s
 
-CMakeFiles/snake.dir/Food.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/Food.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Food.cpp
-CMakeFiles/snake.dir/Food.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snake.dir/Food.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/Food.cpp.obj -MF CMakeFiles\snake.dir\Food.cpp.obj.d -o CMakeFiles\snake.dir\Food.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Food.cpp
+CMakeFiles/snake.dir/systems/InputSystem.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/systems/InputSystem.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/InputSystem.cpp
+CMakeFiles/snake.dir/systems/InputSystem.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snake.dir/systems/InputSystem.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/systems/InputSystem.cpp.obj -MF CMakeFiles\snake.dir\systems\InputSystem.cpp.obj.d -o CMakeFiles\snake.dir\systems\InputSystem.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\InputSystem.cpp
 
-CMakeFiles/snake.dir/Food.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/Food.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Food.cpp > CMakeFiles\snake.dir\Food.cpp.i
+CMakeFiles/snake.dir/systems/InputSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/systems/InputSystem.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\InputSystem.cpp > CMakeFiles\snake.dir\systems\InputSystem.cpp.i
 
-CMakeFiles/snake.dir/Food.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/Food.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Food.cpp -o CMakeFiles\snake.dir\Food.cpp.s
+CMakeFiles/snake.dir/systems/InputSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/systems/InputSystem.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\InputSystem.cpp -o CMakeFiles\snake.dir\systems\InputSystem.cpp.s
 
-CMakeFiles/snake.dir/Renderer.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/Renderer.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Renderer.cpp
-CMakeFiles/snake.dir/Renderer.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snake.dir/Renderer.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/Renderer.cpp.obj -MF CMakeFiles\snake.dir\Renderer.cpp.obj.d -o CMakeFiles\snake.dir\Renderer.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Renderer.cpp
+CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/RenderSystem.cpp
+CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj -MF CMakeFiles\snake.dir\systems\RenderSystem.cpp.obj.d -o CMakeFiles\snake.dir\systems\RenderSystem.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\RenderSystem.cpp
 
-CMakeFiles/snake.dir/Renderer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/Renderer.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Renderer.cpp > CMakeFiles\snake.dir\Renderer.cpp.i
+CMakeFiles/snake.dir/systems/RenderSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/systems/RenderSystem.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\RenderSystem.cpp > CMakeFiles\snake.dir\systems\RenderSystem.cpp.i
 
-CMakeFiles/snake.dir/Renderer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/Renderer.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Renderer.cpp -o CMakeFiles\snake.dir\Renderer.cpp.s
+CMakeFiles/snake.dir/systems/RenderSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/systems/RenderSystem.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\RenderSystem.cpp -o CMakeFiles\snake.dir\systems\RenderSystem.cpp.s
 
-CMakeFiles/snake.dir/Input.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/Input.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Input.cpp
-CMakeFiles/snake.dir/Input.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/snake.dir/Input.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/Input.cpp.obj -MF CMakeFiles\snake.dir\Input.cpp.obj.d -o CMakeFiles\snake.dir\Input.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Input.cpp
+CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/TimeSystem.cpp
+CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj -MF CMakeFiles\snake.dir\systems\TimeSystem.cpp.obj.d -o CMakeFiles\snake.dir\systems\TimeSystem.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\TimeSystem.cpp
 
-CMakeFiles/snake.dir/Input.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/Input.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Input.cpp > CMakeFiles\snake.dir\Input.cpp.i
+CMakeFiles/snake.dir/systems/TimeSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/systems/TimeSystem.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\TimeSystem.cpp > CMakeFiles\snake.dir\systems\TimeSystem.cpp.i
 
-CMakeFiles/snake.dir/Input.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/Input.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\Input.cpp -o CMakeFiles\snake.dir\Input.cpp.s
+CMakeFiles/snake.dir/systems/TimeSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/systems/TimeSystem.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\systems\TimeSystem.cpp -o CMakeFiles\snake.dir\systems\TimeSystem.cpp.s
 
-CMakeFiles/snake.dir/SaveSystem.cpp.obj: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/SaveSystem.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/SaveSystem.cpp
-CMakeFiles/snake.dir/SaveSystem.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/snake.dir/SaveSystem.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/SaveSystem.cpp.obj -MF CMakeFiles\snake.dir\SaveSystem.cpp.obj.d -o CMakeFiles\snake.dir\SaveSystem.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\SaveSystem.cpp
+CMakeFiles/snake.dir/gameplay/Snake.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/gameplay/Snake.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/gameplay/Snake.cpp
+CMakeFiles/snake.dir/gameplay/Snake.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/snake.dir/gameplay/Snake.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/gameplay/Snake.cpp.obj -MF CMakeFiles\snake.dir\gameplay\Snake.cpp.obj.d -o CMakeFiles\snake.dir\gameplay\Snake.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\gameplay\Snake.cpp
 
-CMakeFiles/snake.dir/SaveSystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/SaveSystem.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\SaveSystem.cpp > CMakeFiles\snake.dir\SaveSystem.cpp.i
+CMakeFiles/snake.dir/gameplay/Snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/gameplay/Snake.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\gameplay\Snake.cpp > CMakeFiles\snake.dir\gameplay\Snake.cpp.i
 
-CMakeFiles/snake.dir/SaveSystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/SaveSystem.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\SaveSystem.cpp -o CMakeFiles\snake.dir\SaveSystem.cpp.s
+CMakeFiles/snake.dir/gameplay/Snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/gameplay/Snake.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\gameplay\Snake.cpp -o CMakeFiles\snake.dir\gameplay\Snake.cpp.s
+
+CMakeFiles/snake.dir/gameplay/Food.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/gameplay/Food.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/gameplay/Food.cpp
+CMakeFiles/snake.dir/gameplay/Food.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/snake.dir/gameplay/Food.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/gameplay/Food.cpp.obj -MF CMakeFiles\snake.dir\gameplay\Food.cpp.obj.d -o CMakeFiles\snake.dir\gameplay\Food.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\gameplay\Food.cpp
+
+CMakeFiles/snake.dir/gameplay/Food.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/gameplay/Food.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\gameplay\Food.cpp > CMakeFiles\snake.dir\gameplay\Food.cpp.i
+
+CMakeFiles/snake.dir/gameplay/Food.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/gameplay/Food.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\gameplay\Food.cpp -o CMakeFiles\snake.dir\gameplay\Food.cpp.s
+
+CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj: C:/Users/lenovo/Desktop/Program/C/codes/Snakes/persistence/SaveSystem.cpp
+CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj: CMakeFiles/snake.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj -MF CMakeFiles\snake.dir\persistence\SaveSystem.cpp.obj.d -o CMakeFiles\snake.dir\persistence\SaveSystem.cpp.obj -c C:\Users\lenovo\Desktop\Program\C\codes\Snakes\persistence\SaveSystem.cpp
+
+CMakeFiles/snake.dir/persistence/SaveSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake.dir/persistence/SaveSystem.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lenovo\Desktop\Program\C\codes\Snakes\persistence\SaveSystem.cpp > CMakeFiles\snake.dir\persistence\SaveSystem.cpp.i
+
+CMakeFiles/snake.dir/persistence/SaveSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake.dir/persistence/SaveSystem.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lenovo\Desktop\Program\C\codes\Snakes\persistence\SaveSystem.cpp -o CMakeFiles\snake.dir\persistence\SaveSystem.cpp.s
 
 # Object files for target snake
 snake_OBJECTS = \
-"CMakeFiles/snake.dir/GreedySnake.cpp.obj" \
-"CMakeFiles/snake.dir/Game.cpp.obj" \
-"CMakeFiles/snake.dir/Snake.cpp.obj" \
-"CMakeFiles/snake.dir/Food.cpp.obj" \
-"CMakeFiles/snake.dir/Renderer.cpp.obj" \
-"CMakeFiles/snake.dir/Input.cpp.obj" \
-"CMakeFiles/snake.dir/SaveSystem.cpp.obj"
+"CMakeFiles/snake.dir/main.cpp.obj" \
+"CMakeFiles/snake.dir/core/GameLoop.cpp.obj" \
+"CMakeFiles/snake.dir/core/StateMachine.cpp.obj" \
+"CMakeFiles/snake.dir/systems/InputSystem.cpp.obj" \
+"CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj" \
+"CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj" \
+"CMakeFiles/snake.dir/gameplay/Snake.cpp.obj" \
+"CMakeFiles/snake.dir/gameplay/Food.cpp.obj" \
+"CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj"
 
 # External object files for target snake
 snake_EXTERNAL_OBJECTS =
 
-snake.exe: CMakeFiles/snake.dir/GreedySnake.cpp.obj
-snake.exe: CMakeFiles/snake.dir/Game.cpp.obj
-snake.exe: CMakeFiles/snake.dir/Snake.cpp.obj
-snake.exe: CMakeFiles/snake.dir/Food.cpp.obj
-snake.exe: CMakeFiles/snake.dir/Renderer.cpp.obj
-snake.exe: CMakeFiles/snake.dir/Input.cpp.obj
-snake.exe: CMakeFiles/snake.dir/SaveSystem.cpp.obj
+snake.exe: CMakeFiles/snake.dir/main.cpp.obj
+snake.exe: CMakeFiles/snake.dir/core/GameLoop.cpp.obj
+snake.exe: CMakeFiles/snake.dir/core/StateMachine.cpp.obj
+snake.exe: CMakeFiles/snake.dir/systems/InputSystem.cpp.obj
+snake.exe: CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj
+snake.exe: CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj
+snake.exe: CMakeFiles/snake.dir/gameplay/Snake.cpp.obj
+snake.exe: CMakeFiles/snake.dir/gameplay/Food.cpp.obj
+snake.exe: CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj
 snake.exe: CMakeFiles/snake.dir/build.make
 snake.exe: CMakeFiles/snake.dir/linkLibs.rsp
 snake.exe: CMakeFiles/snake.dir/objects1.rsp
 snake.exe: CMakeFiles/snake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable snake.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lenovo\Desktop\Program\C\codes\Snakes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable snake.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\snake.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

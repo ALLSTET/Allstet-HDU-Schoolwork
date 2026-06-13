@@ -1,44 +1,56 @@
 [
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\GreedySnake.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\GreedySnake.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/GreedySnake.cpp",
-  "output": "CMakeFiles/snake.dir/GreedySnake.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\main.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\main.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/main.cpp",
+  "output": "CMakeFiles/snake.dir/main.cpp.obj"
 },
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\Game.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\Game.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Game.cpp",
-  "output": "CMakeFiles/snake.dir/Game.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\core\\GameLoop.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\core\\GameLoop.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/core/GameLoop.cpp",
+  "output": "CMakeFiles/snake.dir/core/GameLoop.cpp.obj"
 },
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\Snake.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\Snake.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Snake.cpp",
-  "output": "CMakeFiles/snake.dir/Snake.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\core\\StateMachine.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\core\\StateMachine.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/core/StateMachine.cpp",
+  "output": "CMakeFiles/snake.dir/core/StateMachine.cpp.obj"
 },
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\Food.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\Food.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Food.cpp",
-  "output": "CMakeFiles/snake.dir/Food.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\systems\\InputSystem.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\systems\\InputSystem.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/InputSystem.cpp",
+  "output": "CMakeFiles/snake.dir/systems/InputSystem.cpp.obj"
 },
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\Renderer.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\Renderer.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Renderer.cpp",
-  "output": "CMakeFiles/snake.dir/Renderer.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\systems\\RenderSystem.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\systems\\RenderSystem.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/RenderSystem.cpp",
+  "output": "CMakeFiles/snake.dir/systems/RenderSystem.cpp.obj"
 },
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\Input.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\Input.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/Input.cpp",
-  "output": "CMakeFiles/snake.dir/Input.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\systems\\TimeSystem.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\systems\\TimeSystem.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/systems/TimeSystem.cpp",
+  "output": "CMakeFiles/snake.dir/systems/TimeSystem.cpp.obj"
 },
 {
   "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\SaveSystem.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\SaveSystem.cpp",
-  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/SaveSystem.cpp",
-  "output": "CMakeFiles/snake.dir/SaveSystem.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\gameplay\\Snake.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\gameplay\\Snake.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/gameplay/Snake.cpp",
+  "output": "CMakeFiles/snake.dir/gameplay/Snake.cpp.obj"
+},
+{
+  "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\gameplay\\Food.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\gameplay\\Food.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/gameplay/Food.cpp",
+  "output": "CMakeFiles/snake.dir/gameplay/Food.cpp.obj"
+},
+{
+  "directory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -o CMakeFiles\\snake.dir\\persistence\\SaveSystem.cpp.obj -c C:\\Users\\lenovo\\Desktop\\Program\\C\\codes\\Snakes\\persistence\\SaveSystem.cpp",
+  "file": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes/persistence/SaveSystem.cpp",
+  "output": "CMakeFiles/snake.dir/persistence/SaveSystem.cpp.obj"
 }
 ]
