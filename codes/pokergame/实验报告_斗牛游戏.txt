@@ -1,0 +1,471 @@
+游戏程序设计——实验报告
+
+基于 SFML 的棋牌类游戏开发
+
+课程名称：游戏程序设计
+实验名称：基于 SFML 的棋牌类游戏开发
+团队成员：（姓名 + 学号）
+指导教师：XXX
+提交日期：XXXX-XX-XX
+
+目录
+1. 游戏策划
+   1.1 游戏背景
+   1.2 游戏规则
+   1.3 特色与创新
+2. 技术实现
+   2.1 开发环境
+   2.2 系统架构设计
+   2.3 核心功能实现
+   2.4 关键代码解析
+3. 运行演示
+   3.1 游戏截图
+   3.2 游戏流程描述
+4. 结论与总结
+   4.1 遇到的问题及解决方案
+   4.2 团队分工与贡献
+   4.3 未来优化方向
+5. 附录
+   5.1 参考资料
+   5.2 代码链接
+   5.3 项目文件结构
+
+1. 游戏策划
+
+1.1 游戏背景
+
+游戏名称：斗牛（DOU NIU / Bull Fight）
+
+游戏主题：斗牛是一种广泛流行于中国南方地区的传统扑克牌游戏，又称“牛牛”、“斗牛”。游戏以扑克牌点数组合论输赢，节奏明快、规则简单，深受各年龄层玩家喜爱。本作品以 SFML 图形库为引擎，将传统的面对面斗牛玩法移植到 PC 平台，实现人机对战模式。
+
+玩法来源：传统中国民间扑克玩法——“斗牛”。
+
+目标玩家群体：
+- 喜爱棋牌类休闲游戏的玩家
+- 对传统扑克文化感兴趣的玩家
+- 希望在 PC 端进行单机人机对战的用户
+
+核心体验：玩家与 3 名 AI 对手一桌对战，通过叫庄、抢庄、组牌、比牌四个阶段决出胜负，体验斗牛独有的心理博弈与运气乐趣。
+
+1.2 游戏规则
+
+1.2.1 基本设定
+
+- 参与人数：4 人（1 真人 + 3 AI）
+- 使用牌数：一副标准 52 张扑克牌（去掉大小王）
+- 每人牌数：5 张
+- 游戏局数：不限，玩家可随时退出，资金为零则游戏结束
+
+1.2.2 点数计算
+
+在斗牛中，扑克牌的点数按以下规则计算：
+A：1 点
+2 ~ 9：对应面值（2~9 点）
+10、J、Q、K：10 点
+
+1.2.3 牌型等级（由低到高）
+
+本游戏实现了完整的斗牛牌型判定体系，共 14 个等级：
+0：没牛，任意 3 张之和均非 10 的倍数，赔付倍数 1×
+1~6：牛1 ~ 牛6，3 张和为 10 倍数，余 2 张之和个位为 1~6，赔付倍数 1×
+7~9：牛7 ~ 牛9，3 张和为 10 倍数，余 2 张之和个位为 7~9，赔付倍数 2×
+10：牛牛，3 张和为 10 倍数，余 2 张之和也是 10 倍数，赔付倍数 3×
+11：五花牛，5 张全为 J/Q/K，赔付倍数 4×
+12：炸弹，4 张点数相同，赔付倍数 4×
+13：五小牛，5 张均小于 5 且总和 ≤ 10，赔付倍数 5×
+
+1.2.4 游戏流程
+
+每局游戏分为五个阶段：
+阶段一：下底注
+- 每局开始，所有玩家自动扣除底注（默认 100 筹码）进入底池。
+
+阶段二：发牌（前 4 张）
+- 系统向每位玩家发 4 张牌，作为叫庄/抢庄的判断依据。
+
+阶段三：叫庄 & 抢庄
+- 随机决定叫庄顺序。
+- 每位玩家依次选择：叫庄（成为庄家候选人）、抢庄（在已有人叫庄后抢夺庄位）、或过牌（放弃）。
+- 每次抢庄，赔率翻倍（×2 → ×4 → ×8...，困难模式初始即 ×16）。
+- 若原叫庄者被抢，享有一次反抢回合，体现传统斗牛中的守庄权。
+- 若无人叫庄，则随机分配庄家。
+
+阶段四：发第 5 张牌 & 组牌
+- 叫庄结束后，所有玩家获得第 5 张牌。
+- 玩家进入组牌阶段：从 5 张手牌中选择 3 张作为“凑牛组合”，系统自动计算剩余 2 张的牛数。
+- AI 玩家自动完成最优组牌。
+
+阶段五：比牌 & 结算
+- 庄家与其他每位闲家逐一比较牌型等级。
+- 牌型等级高者获胜，赢得底注 × 赔率 × 牌型赔付倍数。
+- 困难模式下底注为基础 100，简单模式赢输金额 ×4 但单局上限 1000。
+- 若人类玩家资金为负，涉及该玩家的结算赔率 ×2。
+
+1.2.5 胜负判定
+
+- 每局结束后按牌型等级分胜负，资金实时结算。
+- 游戏结束条件：玩家资金归零或主动退出。
+
+1.3 特色与创新
+
+对比传统斗牛游戏，本作品在以下方面进行了改进与创新：
+
+1. 完整的三阶段叫庄机制：实现了“叫庄 → 抢庄 → 反抢”的完整流程，而非简化为随机庄家。AI 每一轮都有独立的叫/抢/过决策，让叫庄阶段成为真正的心理博弈。
+2. 难度分层的 AI 策略：提供简单（EASY）、普通（NORMAL）、困难（HARD）三个难度级别，AI 的抢庄概率、手牌评估阈值、赔率策略均有所不同。困难模式下赔率直接 ×16 起步，AI 更加激进，极大提升了游戏挑战性。
+3. 玩家自主组牌：与传统自动比牌不同，本作允许玩家手动选择 3 张牌进行组牌，增加了策略深度，有时需要权衡“保牛”还是“冲高牛”。
+4. 图像化 UI 与动画：使用真实扑克牌 PNG 图片渲染手牌，配合发牌动画（卡牌逐张飞入）、结算动画，以及各类牌型贴图（牛0~牛牛、五花牛等），极大提升了视觉体验。
+5. 存档与每日奖励：通过 MoneySave 系统实现玩家金币持久化存储，支持每日登录奖励机制，增加了游戏的持续吸引力。
+6. 负债惩罚机制：当人类玩家金币为负时，涉及该玩家的赔率翻倍，这一设计既增加了风险管理的策略性，也模拟了真实赌局的债台高筑压力。
+
+2. 技术实现
+
+2.1 开发环境
+
+项目：说明
+编程语言：C++17
+图形库：SFML 3.0（Simple and Fast Multimedia Library）
+编译器：MinGW-w64 GCC（g++）
+编译选项：-std=c++17 -Wall -Wextra -g
+链接库：-lsfml-graphics -lsfml-window -lsfml-system
+开发平台：Windows 11
+字体：Windows 系统字体（黑体 simhei.ttf / 微软雅黑 msyh.ttc）
+构建方式：VS Code Tasks（tasks.json）或命令行 g++
+
+2.2 系统架构设计
+
+本项目采用分层模块化架构，将游戏逻辑与图形界面分离，遵循 MVC 设计思想（Model-View-Controller）：
+main.cpp ← 入口
+    └── GameLoop ← 游戏主循环（Controller）
+            ├── GameLogic ← 核心逻辑层（Model）
+            │     ├── Card ← 牌数据结构
+            │     ├── Deck ← 牌堆管理
+            │     ├── Player ← 玩家数据模型
+            │     └── MoneySave ← 持久化存储
+            ├── StartScreen ← 开始界面（View）
+            └── GameScreen ← 游戏界面（View）
+
+模块职责：
+Card：core/Card.h/.cpp，单张扑克牌的数据结构，包含花色（Suit）、点数（Rank）、斗牛值计算、PNG 文件名生成
+Deck：core/Deck.h/.cpp，52 张牌的管理：初始化、Fisher-Yates 洗牌、抽牌、自动重置
+Player：core/Player.h/.cpp，玩家数据模型：手牌、金币、牌型质量、庄家标记、赔率倍数
+GameLogic：core/GameLogic.h/.cpp，核心游戏逻辑：发牌、叫庄/抢庄/反抢、AI 决策、牌型评估、结算
+GameLoop：core/GameLoop.h/.cpp，游戏主循环：事件处理（键盘+鼠标）、状态更新、渲染调度
+StartScreen：ui/StartScreen.h/.cpp，开始界面：标题动画、难度选择（EASY/NORMAL/HARD）、START/QUIT 按钮
+GameScreen：ui/GameScreen.h/.cpp，游戏主界面：背景、牌面绘制、发牌动画、Bidding 按钮组、组牌界面、结算展示
+MoneySave：persistence/MoneySave.h/.cpp，金币存档系统：本地文件读写、每日登录奖励
+
+2.3 核心功能实现
+
+2.3.1 游戏界面（布局与交互）
+
+开始界面（StartScreen）：
+- 全屏背景图 + 半透明暗色遮罩
+- 标题 "DOU NIU / Bull Fight" 金色大字
+- 难度选择按钮：EASY / NORMAL / HARD（默认 NORMAL 高亮）
+- START GAME 和 QUIT 按钮（圆形胶囊风格，hover 高亮）
+- 底部版本信息
+
+游戏主界面（GameScreen）：
+- 顶部信息栏：局数、底池、庄家信息、赔率（金色分割线）
+- 左侧：玩家手牌区（组牌阶段 5 张横向摊开，带选中高亮和阴影效果）
+- 右侧：3 名 AI 对手区（手牌竖向堆叠，正面/背面按需显示）
+- 底部：操作按钮区（叫庄/抢庄/过牌/确认组牌/继续/回主菜单）
+- 结算阶段：显示牛几贴图（N0~N10 图片）或牌型名称，庄家 VS 闲家结果
+
+交互方式：
+- 鼠标点击：按钮操作（难度选择、叫庄、组牌确认等）
+- 键盘快捷键：Space（叫庄/抢庄/过牌/下一局）、Esc（返回主界面）
+
+2.3.2 规则处理
+
+叫庄/抢庄/反抢机制（GameLogic::startBiddingPhase / playerCallBanker / playerRobBanker / advanceBidder）：
+随机排列叫庄顺序 → 轮流选择：
+  无人叫庄 → 叫庄（赔率×2，困难×16）/ 过牌
+  有人叫庄 → 抢庄（赔率翻倍）/ 过牌
+  一轮结束 → 若原叫庄者被抢 → 反抢回合
+
+牌型评估算法（GameLogic::evaluateHandQuality）：
+1. 优先检查特殊牌型：五小牛 → 炸弹 → 五花牛
+2. 遍历所有 3 张组合（C(5,3) = 10 种），找和能被 10 整除的
+3. 有牛的取余数（0→牛牛，1~9→牛1~牛9），无牛返回 0
+
+组牌阶段（startCardArrangementPhase / evaluatePlayerArrangement）：
+- 玩家从 5 张手中点选 3 张，系统实时计算这 3 张能否凑牛及最终牛数
+- 确认后提交，AI 自动遍历所有 3 张组合选择最优解
+
+结算算法（GameLogic::settleRound）：
+for 每位闲家 vs 庄家：
+    winner = (闲家牌型 > 庄家牌型) ? 闲家 : 庄家
+    payMultiplier = getPayMultiplier(winner牌型)
+    effectiveOdds = 赔率 × (玩家负债 ? 2 : 1)
+    change = 100 × effectiveOdds × payMultiplier
+    if 简单难度: change ×= 4, 单局上限 1000
+
+2.3.3 计算机对手（AI）
+
+AI 系统是本项目的亮点，按难度分三层策略：
+
+4 张牌手牌强度评估（evaluate4CardStrength，0~100 分）：
+- 已有 3 张凑成 10 倍数：直接返回 70~79（几乎必抢）
+- 花牌（J/Q/K）数量加权：+13/张
+- 最佳 2 张取模距离加权
+- 对子奖励 +7，A 灵活性 +3
+
+AI 叫庄/抢庄策略（processAIBid）：
+难度 EASY：叫庄阈值 55，强度差距 ≥ 12 且赔率 ≤ ×4，概率 15%~40%
+难度 NORMAL：叫庄阈值 38，强度差距 ≥ 3 且赔率 ≤ ×8，概率 35%~75%
+难度 HARD：叫庄阈值 25（位置靠后可 18），强度差距 ≥ -8 且赔率 ≤ ×16，概率 60%~92%，位置优先时几乎必抢
+
+AI 组牌（aiAutoArrange）：暴力遍历全部 10 种 3 张组合，选择牛数最大的方案。
+
+2.3.4 其他功能
+
+1. 发牌动画：逐张飞入的扫光效果（drawDealAnimation），每张间隔 0.12 秒。
+2. 卡牌阴影：用代码生成的半透明高斯阴影纹理，卡牌选中时阴影增强。
+3. 结算庆祝：drawSettleCelebration 突出显示赢家结果。
+4. 牛型贴图：加载 assets/TYPE/N0.png ~ N10.png 对应不同牛型，比牌时直观展示。
+5. 每日登录奖励：MoneySave::initMoney() 读取上次登录日期，隔日自动 +500 金币。
+6. 按钮资源优化：Button2.png 和 GetReady.png 通过透明像素扫描自动裁剪白边。
+
+2.4 关键代码解析
+
+2.4.1 斗牛牌型评估算法（核心）
+
+int GameLogic::evaluateHandQuality(const Player &player) const
+{
+    const auto cards = player.getAllCards();
+    if (cards.size() != 5) return BULL_NONE;
+
+    int vals[5], ranks[5], total = 0;
+    for (int i = 0; i < 5; i++) {
+        vals[i] = cards[i].getValue(); // J/Q/K→10, A→1
+        ranks[i] = static_cast<int>(cards[i].getRank());
+        total += vals[i];
+    }
+
+    bool allSmall = true;
+    for (int i = 0; i < 5; i++)
+        if (vals[i] >= 5) { allSmall = false; break; }
+    if (allSmall && total <= 10) return FIVE_SMALL;
+
+    for (int i = 0; i < 5; i++) {
+        int cnt = 0;
+        for (int j = 0; j < 5; j++)
+            if (ranks[j] == ranks[i]) cnt++;
+        if (cnt >= 4) return BOMB;
+    }
+
+    bool allFace = true;
+    for (int i = 0; i < 5; i++) {
+        int r = ranks[i];
+        if (r != JACK && r != QUEEN && r != KING) { allFace = false; break; }
+    }
+    if (allFace) return FIVE_FLOWER;
+
+    for (int i = 0; i < 5; i++)
+        for (int j = i + 1; j < 5; j++)
+            for (int k = j + 1; k < 5; k++) {
+                int sum3 = vals[i] + vals[j] + vals[k];
+                if (sum3 % 10 == 0) {
+                    int remain = (total - sum3) % 10;
+                    return (remain == 0) ? BULL_BULL : remain;
+                }
+            }
+    return BULL_NONE;
+}
+
+设计说明：采用优先级排除法，先检特殊牌型，再枚举 10 种 3 张组合。时间复杂度是 O(1)（固定 5 张牌），算法清晰且易于扩展。
+
+2.4.2 AI 叫庄/抢庄决策
+
+void GameLogic::processAIBid()
+{
+    int bidder = getCurrentBidderIndex();
+    int myStrength = evaluate4CardStrength(players[bidder]);
+
+    if (!hasSomeoneCalledBanker()) {
+        bool shouldCall = false;
+        switch (aiDifficulty) {
+            case AI_EASY: shouldCall = (myStrength >= 55); break;
+            case AI_NORMAL: shouldCall = (myStrength >= 38); break;
+            case AI_HARD: shouldCall = (myStrength >= 25) || (bidderOrder >= 2 && myStrength >= 18); break;
+        }
+        if (shouldCall) playerCallBanker(bidder);
+    } else {
+        int gap = myStrength - evaluate4CardStrength(players[lastCallerIndex]);
+        int robChance = 0;
+        if (robChance > 0 && (rand() % 100) < robChance)
+            playerRobBanker(bidder);
+        else
+            advanceBidder();
+    }
+}
+
+设计说明：AI 决策模拟真人心理，“手强则叫，位优则抢”。简单 AI 保守，困难 AI 更激进。
+
+2.4.3 主循环事件分发
+
+void GameLoop::handleEvents()
+{
+    while (auto event = window.pollEvent()) {
+        if (event->is<sf::Event::Closed>()) window.close();
+        else if (event->is<sf::Event::MouseButtonPressed>()) {
+            auto mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+            if (currentState == START_SCREEN) {
+                // 开始界面：START / QUIT
+            } else if (currentState == GAME_PLAYING) {
+                if (isArrangementPhase) handleArrangementClick();
+                else if (isSettlePhase) handleSettleClick();
+                else if (isBiddingPhase) handleBiddingClick();
+            }
+        }
+        else if (event->is<sf::Event::KeyPressed>()) {
+            if (Space && isBidding) playerCallBanker / playerRobBanker;
+            if (Space && isSettle) startNewRound();
+            if (Escape) return to menu;
+        }
+    }
+}
+
+设计说明：按游戏状态划分事件处理路径，避免条件混乱。键盘和鼠标双通道输入，提升操作便利性。
+
+2.4.4 卡牌纹理管理系统
+
+std::string Card::getImageFilename() const {
+    return getSuitName() + getRankSymbol() + ".png";
+}
+
+void GameScreen::loadCardTextures() {
+    const std::vector<std::string> suits = {"Club","Diamond","Heart","Spade"};
+    const std::vector<std::string> ranks = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+    for (const auto &suit : suits)
+        for (const auto &rank : ranks) {
+            std::string key = suit + rank;
+            sf::Texture texture;
+            if (texture.loadFromFile(basePath + key + ".png"))
+                cardTextures.emplace(key, std::move(texture));
+        }
+}
+
+设计说明：每张牌通过花色英文名和点数字符串拼接成 key（如 SpadeA），存入哈希表。绘制时快速查找纹理，52 张纹理一次性加载。
+
+3. 运行演示
+
+3.1 游戏截图
+
+说明：以下为游戏主要界面的描述。实际截图请在运行游戏后截取并替换。
+
+开始界面：
+- 深色背景上显示 "DOU NIU" 金色标题和 "Bull Fight" 副标题
+- 中央难度选择区域：EASY（绿色）/ NORMAL（黄色）/ HARD（红色）三个按钮
+- 底部红色 START GAME 按钮和灰色 QUIT 按钮
+- 底部版本号 v1.0 | C++ / SFML 3 | 2025
+
+叫庄阶段：
+- 顶部绿色毛毡桌布背景上显示局号、底池、倒计时
+- 玩家（You）4 张手牌在左侧横向展示
+- 3 名 AI 对手手牌竖向排列在右侧（卡背朝上）
+- 底部 3 个操作按钮：CALL BANKER / ROB BANKER / PASS
+- 到 AI 决策时，按钮变灰，顶部显示 等待 AI 出价...
+
+组牌阶段：
+- 玩家 5 张手牌横向摊开，点击可选（选中牌上移 + 金色高亮边框）
+- 实时显示当前选中 3 张牌的牛型预览
+- 底部 CONFIRM 确认按钮
+- AI 自动完成组牌
+
+结算阶段：
+- 所有玩家 5 张手牌全部正面展示
+- 每位玩家头像上方显示牛型贴图（N0~N10 或牌型名称）
+- 顶部文字显示结算结果：Round X | Banker: XXX [牛牛] Odds x4 | You +3200
+- 底部 CONTINUE 和 BACK TO MENU 按钮
+
+3.2 游戏流程描述
+
+启动游戏
+  点击 START
+  进入开始界面，选择难度
+  进入游戏主界面
+  扣底注并发前 4 张牌
+  进入叫庄/抢庄阶段，AI 逐帧决策
+  发第 5 张牌
+  进入组牌阶段，玩家手动或 AI 自动组牌
+  进入比牌与结算阶段（庄 vs 3 闲家）
+  空格或按钮开始下一局
+  若玩家资金为 0，则结束游戏
+
+4. 结论与总结
+
+4.1 开发过程中遇到的问题及解决方案
+
+1. SFML 3 与 SFML 2 的 API 差异：SFML 3 中大量 API 改为 Vector2 和 sf::Event 使用 union → std::optional，早期代码兼容报错。解决方案：全面适配 SFML 3 API，使用 event->is<T>() 等新接口。
+2. 卡牌 PNG 资源路径问题：Windows 下 VS Code 工作目录与 exe 运行目录不一致，导致纹理加载失败。解决方案：使用绝对路径与相对路径双重回退策略，加载失败时输出日志。
+3. AI 叫庄死循环：早期实现中所有 AI 同时决策，导致一帧内走完全部叫庄流程。解决方案：引入 AI_BID_INTERVAL = 1.2s 逐帧驱动机制，使用 sf::Clock 计时器让 AI 逐个轮流出价。
+4. 反抢机制设计：传统斗牛中原叫庄者被抢后有守庄权，用简单顺序轮转难以实现。解决方案：引入 robBackPhase 标志位，一轮抢庄结束后检测原叫庄者是否被抢，若是则单独调度反抢回合。
+5. 组牌阶段 UI 交互：需要实现点击选中 3 张牌、确认提交且数量限制。解决方案：使用 arrangementSelectedIndices 向量追踪选中状态，最多 3 张，选中状态实时反映。
+6. 按钮图片透明区域：Button2.png 图片有大面积透明边缘，直接渲染导致按钮间距异常。解决方案：通过像素扫描算法自动检测非透明像素包围盒，生成裁剪区域。
+7. 随机名字重复：AI 玩家从名字池中随机取名，偶尔出现重名。解决方案：使用 Fisher-Yates 打乱加去重检查。
+
+4.2 团队分工与贡献
+
+说明：以下为建议分工模板，请按实际情况修改。
+
+成员1（学号1）：核心游戏逻辑，斗牛牌型评估算法、叫庄/抢庄/反抢机制、结算系统、AI 决策引擎。
+成员2（学号2）：图形界面与交互，SFML 渲染系统、开始界面/游戏界面 UI、发牌动画、卡牌纹理管理、资源裁剪优化。
+成员3（学号3）：系统架构与持久化，主循环框架、事件分发、状态机、金币存档系统、每日登录奖励、测试与调试。
+
+4.3 未来优化方向
+
+1. 网络对战：引入 TCP/UDP 网络模块，实现局域网或在线多人实时对战，支持房间创建与加入。
+2. 更多牌型与玩法变体：支持百人斗牛、明牌抢庄模式、特殊牌型奖励（同花牛、顺子牛等）。
+3. UI/UX 提升：添加手牌拖拽排序、金币变化飞字动画、窗口缩放与全屏模式、音效与背景音乐。
+4. AI 增强：引入基于历史数据的机器学习模型，让 AI 策略自适应玩家风格，添加 AI 诈唬行为。
+5. 数据统计：增加玩家战绩面板（胜率、最大连胜、总收益曲线图等）。
+6. 跨平台支持：目前仅支持 Windows（路径硬编码），未来可适配 Linux/macOS，使用 CMake 替代手写 g++ 命令。
+
+5. 附录
+
+5.1 参考资料
+
+1. SFML 3.0 官方文档：https://www.sfml-dev.org/documentation/3.0.0/
+2. SFML Game Development (Book)，Packt Publishing。
+3. 《C++ Primer Plus (第 6 版)》，Stephen Prata。
+4. 斗牛游戏规则：百度百科 - 斗牛（扑克牌游戏）。
+5. VS Code C/C++ 开发环境配置：https://code.visualstudio.com/docs/cpp/config-mingw。
+6. Fisher-Yates Shuffle Algorithm。
+
+5.2 代码链接
+
+项目路径：c:\Users\lenovo\Desktop\Program\C\codes\pokergame\
+编译命令：
+g++ -std=c++17 -Wall -Wextra -g main.cpp core/Card.cpp core/Player.cpp core/Deck.cpp core/GameLogic.cpp core/GameLoop.cpp ui/StartScreen.cpp ui/GameScreen.cpp persistence/MoneySave.cpp -ISFML3/include -LSFML3/lib -lsfml-graphics -lsfml-window -lsfml-system -o poker_game.exe
+
+5.3 项目文件结构
+
+pokergame/
+main.cpp                  程序入口
+core/                     核心逻辑层
+Card.h / Card.cpp         扑克牌数据结构
+Deck.h / Deck.cpp         牌堆管理
+Player.h / Player.cpp     玩家数据模型
+GameLogic.h / GameLogic.cpp  核心游戏逻辑
+GameLoop.h / GameLoop.cpp    游戏主循环
+ui/                       图形界面层
+StartScreen.h / StartScreen.cpp  开始界面
+GameScreen.h / GameScreen.cpp    游戏主界面
+persistence/              持久化层
+MoneySave.h / MoneySave.cpp      金币存档系统
+SaveSystem.h / SaveSystem.cpp    通用存档框架
+assets/                   资源文件
+PNG/                      52 张扑克牌 PNG + 卡背 Background.png
+TYPE/                     UI 贴图（背景、按钮、牛型图标等）
+SFML3/                    SFML 3.0 库文件
+include/                  SFML 头文件
+lib/                      SFML 静态/动态库
+bin/                      SFML 运行时 DLL
+doc/                      SFML API 文档
+examples/                 SFML 官方示例
+.vscode/
+    tasks.json            VS Code 编译任务配置
+
+报告完

@@ -88,5 +88,6 @@
     "map": "cpp",
     "chrono": "cpp",
     "ratio": "cpp"
-  }
+  },
+  "cmake.sourceDirectory": "C:/Users/lenovo/Desktop/Program/C/codes/Snakes"
 }

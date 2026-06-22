@@ -1,106 +1,131 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Build main.exe",
-            "type": "shell",
-            "command": "C:\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-std=c++17",
-                "-Wall",
-                "-Wextra",
-                "-g",
-                "${workspaceFolder}\\main.cpp",
-                "${workspaceFolder}\\core\\Card.cpp",
-                "${workspaceFolder}\\core\\Player.cpp",
-                "${workspaceFolder}\\core\\Deck.cpp",
-                "${workspaceFolder}\\core\\GameLogic.cpp",
-                "${workspaceFolder}\\core\\GameLoop.cpp",
-                "${workspaceFolder}\\ui\\StartScreen.cpp",
-                "${workspaceFolder}\\ui\\GameScreen.cpp",
-                "-I${workspaceFolder}\\SFML3\\include",
-                "-L${workspaceFolder}\\SFML3\\lib",
-                "-lsfml-graphics",
-                "-lsfml-window",
-                "-lsfml-system",
-                "-o",
-                "${workspaceFolder}\\poker_game.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Compile main.cpp and game sources with SFML"
-        },
-        {
-            "label": "Build 5th.exe",
-            "type": "shell",
-            "command": "C:\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-std=c++17",
-                "-Wall",
-                "-Wextra",
-                "-g",
-                "${workspaceFolder}\\5th.cpp",
-                "-I${workspaceFolder}\\SFML3\\include",
-                "-L${workspaceFolder}\\SFML3\\lib",
-                "-lsfml-graphics",
-                "-lsfml-window",
-                "-lsfml-system",
-                "-o",
-                "${workspaceFolder}\\poker_game.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "detail": "Compile 5th.cpp with SFML"
-        }
-        ,
-        {
-            "label": "C/C++ Compile Run: C/C++ Compile Run: Compile",
-            "type": "shell",
-            "command": "C:\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-std=c++17",
-                "-Wall",
-                "-Wextra",
-                "-g",
-                "${workspaceFolder}\\main.cpp",
-                "${workspaceFolder}\\core\\Card.cpp",
-                "${workspaceFolder}\\core\\Player.cpp",
-                "${workspaceFolder}\\core\\Deck.cpp",
-                "${workspaceFolder}\\core\\GameLogic.cpp",
-                "${workspaceFolder}\\core\\GameLoop.cpp",
-                "${workspaceFolder}\\ui\\StartScreen.cpp",
-                "${workspaceFolder}\\ui\\GameScreen.cpp",
-                "-I${workspaceFolder}\\SFML3\\include",
-                "-L${workspaceFolder}\\SFML3\\lib",
-                "-lsfml-graphics",
-                "-lsfml-window",
-                "-lsfml-system",
-                "-o",
-                "${workspaceFolder}\\poker_game.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            },
-            "detail": "Compatibility task for C/C++ extension compile-run"
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build main.exe",
+			"type": "shell",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-std=c++17",
+				"-Wall",
+				"-Wextra",
+				"-g",
+				"${workspaceFolder}\\main.cpp",
+				"${workspaceFolder}\\core\\Card.cpp",
+				"${workspaceFolder}\\core\\Player.cpp",
+				"${workspaceFolder}\\core\\Deck.cpp",
+				"${workspaceFolder}\\core\\GameLogic.cpp",
+				"${workspaceFolder}\\core\\GameLoop.cpp",
+				"${workspaceFolder}\\ui\\StartScreen.cpp",
+				"${workspaceFolder}\\ui\\GameScreen.cpp",
+				"-I${workspaceFolder}\\SFML3\\include",
+				"-L${workspaceFolder}\\SFML3\\lib",
+				"-lsfml-graphics",
+				"-lsfml-window",
+				"-lsfml-system",
+				"-o",
+				"${workspaceFolder}\\poker_game.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Compile main.cpp and game sources with SFML"
+		},
+		{
+			"label": "Build 5th.exe",
+			"type": "shell",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-std=c++17",
+				"-Wall",
+				"-Wextra",
+				"-g",
+				"${workspaceFolder}\\5th.cpp",
+				"-I${workspaceFolder}\\SFML3\\include",
+				"-L${workspaceFolder}\\SFML3\\lib",
+				"-lsfml-graphics",
+				"-lsfml-window",
+				"-lsfml-system",
+				"-o",
+				"${workspaceFolder}\\poker_game.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "Compile 5th.cpp with SFML"
+		},
+		{
+			"label": "C/C++ Compile Run: C/C++ Compile Run: Compile",
+			"type": "shell",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-std=c++17",
+				"-Wall",
+				"-Wextra",
+				"-g",
+				"${workspaceFolder}\\main.cpp",
+				"${workspaceFolder}\\core\\Card.cpp",
+				"${workspaceFolder}\\core\\Player.cpp",
+				"${workspaceFolder}\\core\\Deck.cpp",
+				"${workspaceFolder}\\core\\GameLogic.cpp",
+				"${workspaceFolder}\\core\\GameLoop.cpp",
+				"${workspaceFolder}\\ui\\StartScreen.cpp",
+				"${workspaceFolder}\\ui\\GameScreen.cpp",
+				"-I${workspaceFolder}\\SFML3\\include",
+				"-L${workspaceFolder}\\SFML3\\lib",
+				"-lsfml-graphics",
+				"-lsfml-window",
+				"-lsfml-system",
+				"-o",
+				"${workspaceFolder}\\poker_game.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "Compatibility task for C/C++ extension compile-run"
+		},
+		{
+			"label": "Poker: Build",
+			"type": "shell",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-std=c++17",
+				"-Wall",
+				"-Wextra",
+				"-g",
+				"main.cpp",
+				"core/Card.cpp",
+				"core/Player.cpp",
+				"core/Deck.cpp",
+				"core/GameLogic.cpp",
+				"core/GameLoop.cpp",
+				"ui/StartScreen.cpp",
+				"ui/GameScreen.cpp",
+				"-ISFML3/include",
+				"-LSFML3/lib",
+				"-lsfml-graphics",
+				"-lsfml-window",
+				"-lsfml-system",
+				"-o",
+				"poker_game.exe"
+			]
+		}
+	]
 }

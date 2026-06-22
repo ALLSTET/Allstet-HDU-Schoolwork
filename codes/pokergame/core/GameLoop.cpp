@@ -1,89 +1,157 @@
 #include "GameLoop.h"
+#include "../persistence/MoneySave.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 
-GameLoop::GameLoop() : window(sf::VideoMode(sf::Vector2u(1200, 800)), "Poker Game - ÆË¿ËÅÆÓÎÏ·"), currentState(START_SCREEN) {
+GameLoop::GameLoop() : window(sf::VideoMode(sf::Vector2u(1200, 800)), "Poker Game - æ‰‘å…‹ç‰Œæ¸¸æˆ"), currentState(START_SCREEN)
+{
     srand(static_cast<unsigned>(time(0)));
     window.setFramerateLimit(60);
-    
+
     startScreen = std::make_unique<StartScreen>(window);
     gameScreen = std::make_unique<GameScreen>(gameLogic, window);
 }
 
-void GameLoop::run() {
+void GameLoop::run()
+{
     std::cout << "Game Started! Click Start Game button to begin..." << std::endl;
-    
-    while (window.isOpen()) {
+
+    while (window.isOpen())
+    {
         handleEvents();
         update();
         render();
     }
-    
+
     std::cout << "Game Closed." << std::endl;
 }
 
-void GameLoop::handleEvents() {
-    while (auto event = window.pollEvent()) {
-        if (event->is<sf::Event::Closed>()) {
+void GameLoop::handleEvents()
+{
+    while (auto event = window.pollEvent())
+    {
+        if (event->is<sf::Event::Closed>())
+        {
             window.close();
-        } else if (event->is<sf::Event::MouseButtonPressed>()) {
+        }
+        else if (event->is<sf::Event::MouseButtonPressed>())
+        {
             auto mouseEvent = event->getIf<sf::Event::MouseButtonPressed>();
-            if (mouseEvent && mouseEvent->button == sf::Mouse::Button::Left) {
+            if (mouseEvent && mouseEvent->button == sf::Mouse::Button::Left)
+            {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-                
-                if (currentState == START_SCREEN) {
+
+                if (currentState == START_SCREEN)
+                {
                     startScreen->handleMouseClick(mousePos);
-                    if (startScreen->isStartButtonClicked(mousePos)) {
+                    if (startScreen->isStartButtonClicked(mousePos))
+                    {
                         std::cout << "Start Game!" << std::endl;
                         startNewGame();
-                    } else if (startScreen->isQuitButtonClicked(mousePos)) {
+                    }
+                    else if (startScreen->isQuitButtonClicked(mousePos))
+                    {
                         window.close();
                     }
-                } else if (currentState == GAME_PLAYING) {
-                    if (gameLogic.isBiddingActive() && gameLogic.getCurrentBidderIndex() == 0) {
+                }
+                else if (currentState == GAME_PLAYING)
+                {
+                    if (gameLogic.isSecondDealDone() && gameLogic.isCardArrangementActive())
+                    {
+                        // ç»„ç‰Œé˜¶æ®µï¼šç©å®¶é€‰ç‰Œ+ç¡®è®¤
+                        int result = gameScreen->handleArrangementClick(mousePos);
+                        if (result == 1)
+                        {
+                            gameLogic.confirmPlayerArrangement(0, gameScreen->getArrangementSelection());
+                            gameScreen->resetArrangementSelection();
+                        }
+                    }
+                    else if (gameLogic.isSecondDealDone() && !gameLogic.isBiddingActive())
+                    {
+                        int action = gameScreen->handleSettleClick(mousePos);
+                        if (action == 1)
+                        {
+                            // ç»§ç»­ â†’ æ–°ä¸€å±€
+                            gameLogic.startNewRound();
+                            aiBidClock.restart();
+                            timeSinceLastAIBid = 0.f;
+                            gameScreen->onNewRound();
+                            std::cout << "New round started!" << std::endl;
+                        }
+                        else if (action == 2)
+                        {
+                            // é€€å›ä¸»ç•Œé¢
+                            currentState = START_SCREEN;
+                            std::cout << "Returned to main menu." << std::endl;
+                        }
+                    }
+                    else if (gameLogic.isBiddingActive() && gameLogic.getCurrentBidderIndex() == 0)
+                    {
                         gameScreen->handleBiddingClick(mousePos);
-                    } else {
+                    }
+                    else
+                    {
                         gameScreen->handleMouseClick(mousePos);
                     }
                 }
             }
-        } else if (event->is<sf::Event::KeyPressed>()) {
+        }
+        else if (event->is<sf::Event::KeyPressed>())
+        {
             auto keyEvent = event->getIf<sf::Event::KeyPressed>();
-            if (keyEvent) {
-                if (keyEvent->code == sf::Keyboard::Key::Space && currentState == GAME_PLAYING) {
-                    if (gameLogic.isBiddingActive()) {
-                        // Íæ¼Ò½Ğ×¯/ÇÀ×¯/¹ıÅÆ£¨AIÓÉupdate()×Ô¶¯Çı¶¯£©
-                        if (gameLogic.getCurrentBidderIndex() == 0) {
-                            if (gameLogic.canPlayerCallBanker(0)) {
+            if (keyEvent)
+            {
+                if (keyEvent->code == sf::Keyboard::Key::Space && currentState == GAME_PLAYING)
+                {
+                    if (gameLogic.isBiddingActive())
+                    {
+                        // ç©å®¶å«åº„/æŠ¢åº„/è¿‡ç‰Œï¼ˆAIç”±update()è‡ªåŠ¨é©±åŠ¨ï¼‰
+                        if (gameLogic.getCurrentBidderIndex() == 0)
+                        {
+                            if (gameLogic.canPlayerCallBanker(0))
+                            {
                                 gameLogic.playerCallBanker(0);
                                 std::cout << "Player calls banker. Odds x" << gameLogic.getCurrentOddsMultiplier() << std::endl;
-                            } else if (gameLogic.canPlayerRobBanker(0)) {
+                            }
+                            else if (gameLogic.canPlayerRobBanker(0))
+                            {
                                 gameLogic.playerRobBanker(0);
                                 std::cout << "Player robs banker. Odds x" << gameLogic.getCurrentOddsMultiplier() << std::endl;
-                            } else {
+                            }
+                            else
+                            {
                                 gameLogic.playerPassBanker(0);
                             }
                         }
-                    } else if (gameLogic.isSecondDealDone()) {
-                        // ½áËãÍê³Éºó£¬¿Õ¸ñ¿ªÊ¼ĞÂÒ»¾Ö
+                    }
+                    else if (gameLogic.isSecondDealDone())
+                    {
+                        // ç»“ç®—å®Œæˆåï¼Œç©ºæ ¼å¼€å§‹æ–°ä¸€å±€
                         gameLogic.startNewRound();
                         aiBidClock.restart();
                         timeSinceLastAIBid = 0.f;
+                        gameScreen->onNewRound();
                         std::cout << "New round started!" << std::endl;
-                    } else {
+                    }
+                    else
+                    {
                         // Space key to play card (legacy)
                         int selectedCard = gameScreen->getSelectedCardIndex();
-                        if (selectedCard >= 0) {
-                            auto& players = gameLogic.getPlayers();
-                            if (!players.empty() && !players[0].isAIPlayer()) {
-                                const Card& card = players[0].getCard(selectedCard);
+                        if (selectedCard >= 0)
+                        {
+                            auto &players = gameLogic.getPlayers();
+                            if (!players.empty() && !players[0].isAIPlayer())
+                            {
+                                const Card &card = players[0].getCard(selectedCard);
                                 gameLogic.addTableCard(card);
                                 std::cout << "Player plays: " << card.toString() << std::endl;
-                                for (size_t i = 1; i < players.size(); i++) {
-                                    if (players[i].getCardCount() > 0) {
+                                for (size_t i = 1; i < players.size(); i++)
+                                {
+                                    if (players[i].getCardCount() > 0)
+                                    {
                                         int aiIndex = rand() % players[i].getCardCount();
-                                        const Card& aiCard = players[i].getCard(aiIndex);
+                                        const Card &aiCard = players[i].getCard(aiIndex);
                                         gameLogic.addTableCard(aiCard);
                                         std::cout << players[i].getName() << " plays: " << aiCard.toString() << std::endl;
                                     }
@@ -93,7 +161,9 @@ void GameLoop::handleEvents() {
                             }
                         }
                     }
-                } else if (keyEvent->code == sf::Keyboard::Key::Escape) {
+                }
+                else if (keyEvent->code == sf::Keyboard::Key::Escape)
+                {
                     currentState = START_SCREEN;
                     std::cout << "Return to menu" << std::endl;
                 }
@@ -102,76 +172,96 @@ void GameLoop::handleEvents() {
     }
 }
 
-void GameLoop::update() {
+void GameLoop::update()
+{
     float dt = aiBidClock.restart().asSeconds();
     timeSinceLastAIBid += dt;
-    
-    // ½Ğ×¯½×¶Î£ºAIÖğÖ¡×Ô¶¯³ö¼Û
-    if (gameLogic.isBiddingActive() && gameLogic.getCurrentBidderIndex() != 0) {
-        if (timeSinceLastAIBid >= AI_BID_INTERVAL) {
+
+    // å«åº„é˜¶æ®µï¼šAIé€å¸§è‡ªåŠ¨å‡ºä»·
+    if (gameLogic.isBiddingActive() && gameLogic.getCurrentBidderIndex() != 0)
+    {
+        if (timeSinceLastAIBid >= AI_BID_INTERVAL)
+        {
             gameLogic.processAIBid();
             timeSinceLastAIBid = 0.f;
         }
     }
-    
-    // ½Ğ×¯½áÊøºó£¬·¢µÚ5ÕÅÅÆ£¨½öÓÎÏ·½øĞĞÖĞ£©
-    if (currentState == GAME_PLAYING && !gameLogic.isBiddingActive() && !gameLogic.isSecondDealDone()) {
+
+    // å«åº„ç»“æŸåï¼Œå‘ç¬¬5å¼ ç‰Œå¹¶è¿›å…¥ç»„ç‰Œé˜¶æ®µ
+    if (currentState == GAME_PLAYING && !gameLogic.isBiddingActive() && !gameLogic.isSecondDealDone())
+    {
         gameLogic.dealCardsPhase2();
         std::cout << "Bidding over. 5th card dealt." << std::endl;
         int bi = gameLogic.getBankerIndex();
-        const auto& pls = gameLogic.getPlayers();
-        if (bi >= 0 && bi < static_cast<int>(pls.size())) {
+        const auto &pls = gameLogic.getPlayers();
+        if (bi >= 0 && bi < static_cast<int>(pls.size()))
+        {
             std::cout << "Banker: " << pls[bi].getName()
                       << "  Odds: x" << gameLogic.getCurrentOddsMultiplier() << std::endl;
         }
-        // ×Ô¶¯½øÈë½áËã
-        gameLogic.settleRound();
+        // è¿›å…¥ç»„ç‰Œé˜¶æ®µï¼ˆä¸å†è‡ªåŠ¨ç»“ç®—ï¼‰
+        gameLogic.startCardArrangementPhase();
         timeSinceLastAIBid = 0.f;
     }
-    
+
     gameScreen->update();
-    
-    if (currentState == GAME_PLAYING && gameLogic.isGameOver()) {
+
+    if (currentState == GAME_PLAYING && gameLogic.isGameOver())
+    {
         currentState = GAME_OVER;
         std::cout << "Game Over! Press ESC to return to menu." << std::endl;
     }
 }
 
-void GameLoop::render() {
-    // If a round winner exists, highlight background in blue
-    if (gameLogic.getLastRoundWinner() != -1) {
-        window.clear(sf::Color::Blue);
-    } else {
-        window.clear(sf::Color::Green);
-    }
-    
-    if (currentState == START_SCREEN) {
+void GameLoop::render()
+{
+    window.clear(sf::Color(20, 40, 20)); // æ·±ç»¿åº•è‰²ï¼ˆèƒŒæ™¯å›¾æœªåŠ è½½æ—¶çš„å›é€€ï¼‰
+
+    if (currentState == START_SCREEN)
+    {
         startScreen->draw();
-    } else if (currentState == GAME_PLAYING || currentState == GAME_OVER) {
-        gameScreen->draw();
-        
-        if (currentState == GAME_OVER) {
-            // sf::Text gameOverText(font, "ÓÎÏ·½áÊø£¡°´ESC·µ»Ø²Ëµ¥", 30);
-            // gameOverText.setPosition(window.getSize().x / 2.f - 200, window.getSize().y / 2.f);
-            // gameOverText.setFillColor(sf::Color::White);
-            // window.draw(gameOverText);
-        }
     }
-    
+    else if (currentState == GAME_PLAYING || currentState == GAME_OVER)
+    {
+        gameScreen->draw();
+    }
+
     window.display();
 }
 
-void GameLoop::startNewGame() {
+void GameLoop::startNewGame()
+{
     currentState = GAME_PLAYING;
     gameLogic.initializeGame();
-    gameLogic.startNewRound();  // ¿Ûµ××¢ + ·¢4ÕÅ + ½Ğ×¯
+
+    // å°† StartScreen çš„éš¾åº¦ä¼ é€’ç»™ GameLogic
+    auto diff = startScreen->getSelectedDifficulty();
+    gameLogic.setAIDifficulty(static_cast<AIDifficulty>(diff));
+
+    // â”€â”€ äººç±»ç©å®¶ï¼šåŠ è½½å­˜æ¡£ + æ¯æ—¥ç™»å½•å¥–åŠ± â”€â”€
+    int humanMoney = MoneySave::initMoney();
+    gameLogic.setPlayerScore(0, humanMoney);
+    std::cout << "Player money: $" << humanMoney << std::endl;
+
+    // â”€â”€ AI å¯¹æ‰‹ï¼šéšæœº 1000â€“10000 â”€â”€
+    const auto &players = gameLogic.getPlayers();
+    for (int i = 1; i < static_cast<int>(players.size()); i++)
+    {
+        int aiMoney = 1000 + (rand() % 9001); // 1000~10000
+        gameLogic.setPlayerScore(i, aiMoney);
+        std::cout << players[i].getName() << " money: $" << aiMoney << std::endl;
+    }
+
+    gameLogic.startNewRound(); // æ‰£åº•æ³¨ + å‘4å¼  + å«åº„
     aiBidClock.restart();
     timeSinceLastAIBid = 0.f;
-    
+    gameScreen->onNewRound();
+
     std::cout << "\n========== GAME START ==========" << std::endl;
     std::cout << "Tips: Click buttons or SPACE to bid | SPACE for next round | ESC to menu" << std::endl;
 }
 
-void GameLoop::endGame() {
+void GameLoop::endGame()
+{
     currentState = START_SCREEN;
 }

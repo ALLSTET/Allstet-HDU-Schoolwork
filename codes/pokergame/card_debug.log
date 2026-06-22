@@ -122,3 +122,317 @@ Loaded: 52 / Failed: 0 / Total: 52
 drawCard #1 HIT: key=Spade5 tex=750x1044 @465,560
 drawCard #2 HIT: key=Spade8 tex=749x1044 @535,560
 drawCard #3 HIT: key=Spade10 tex=749x1044 @605,560
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\
+FAILED: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\Club2.png
+FAILED: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\Club3.png
+FAILED: C:\Users\lenovo\Desktop\Program\C\codes\game\assets\PNG\Club4.png
+Loaded: 0 / Failed: 52 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===
+=== loadCardTextures() START ===
+basePath: C:\Users\lenovo\Desktop\Program\C\codes\pokergame\assets\PNG\
+Loaded: 52 / Failed: 0 / Total: 52
+=== loadCardTextures() END ===

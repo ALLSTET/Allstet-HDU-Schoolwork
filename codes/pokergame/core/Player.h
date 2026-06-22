@@ -5,21 +5,23 @@
 #include <vector>
 #include <string>
 
-class Player {
+class Player
+{
 public:
-    Player(const std::string& name, bool isAI = false);
-    
-    void addCard(const Card& card);
+    Player(const std::string &name, bool isAI = false);
+
+    void addCard(const Card &card);
     void removeCard(int index);
-    const Card& getCard(int index) const;
+    const Card &getCard(int index) const;
     int getCardCount() const;
     std::vector<Card> getAllCards() const;
-    
+
     std::string getName() const;
     bool isAIPlayer() const;
     void addScore(int points);
     void deductChips(int amount);
     int getScore() const;
+    void setScore(int s);
     void resetHand();
     void resetForNewRound();
 
@@ -29,7 +31,7 @@ public:
     bool isBanker() const;
     void setOddsMultiplier(int multiplier);
     int getOddsMultiplier() const;
-    
+
     void displayCards() const;
 
 private:
